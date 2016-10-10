@@ -71,7 +71,13 @@ function add_js()
         wp_register_script('confirmation_js',get_template_directory_uri().'/dist/js/confirmation.min.js');
         wp_enqueue_script('confirmation_js');
     }
-    
+    if (is_page_template('page-checkout.php')){
+
+        wp_enqueue_style('confirmation', get_template_directory_uri().'/dist/css/checkout.css');
+        wp_register_script('checkout_js',get_template_directory_uri().'/dist/js/checkout.min.js');
+        wp_enqueue_script('checkout_js');
+    }
+
 
 }
 wp_enqueue_style('style', get_template_directory_uri().'/style.css');

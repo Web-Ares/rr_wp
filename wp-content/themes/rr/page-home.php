@@ -207,7 +207,7 @@ get_header(); ?>
             <?php endif; ?>
 
 
-            <a href="#" class="btn btn_arrow"><?php the_field('button_text') ?></a>
+            <a href="<?= get_the_permalink(59) ?>" class="btn btn_arrow"><?php the_field('button_text') ?></a>
             <?php if($payment = get_field('payment_required_field')){ ?>
                 <span class="setup-process__info"><?= $payment ?></span>
            <?php  } ?>
