@@ -11,7 +11,14 @@
   
 
 </head>
-<body>
+<?php
+
+if(get_the_ID()===86 || get_the_ID()===49){
+    $path = 'data-src='.get_the_permalink(59);
+} else{
+    $path = '';
+}?>
+<body <?= $path ?>>
 
 <?php if (is_page() || is_single() || is_singular() || is_404()) {
     the_post();

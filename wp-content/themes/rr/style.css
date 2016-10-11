@@ -6,3 +6,14 @@ Version: 1.0
 .wpcf7-response-output{
     display: none !important;
 }
+
+.gfield_label {
+    display: none !important;
+}
+.name_first label {
+    display: none !important;
+}
+
+.validation_error {
+    margin-bottom: 15px !important;
+}

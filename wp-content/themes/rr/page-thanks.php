@@ -4,6 +4,11 @@
  */
 get_header(); ?>
 
+<?php
+$name = $_GET['guest'];
+$order = $_GET['order'];
+?>
+
 <!-- site__content -->
 <div class="site__content site__content_full">
 
@@ -14,13 +19,12 @@ get_header(); ?>
             <!-- confirmation__inner -->
             <div class="confirmation__inner">
 
-                <h1 class="site__title site__title_3">THANK YOU, JOHN</h1>
+                <h1 class="site__title site__title_3">THANK YOU, <?= $name ?></h1>
 
                 <!-- confirmation__data -->
                 <div class="confirmation__data">
                     <p><strong><?php the_field('order_text') ?></strong></p>
-                    <p>You chose minute pricing (1,5M minutes ($0,0003/minute),</p>
-                    <p>Frankfurt, Germany + 2 services).</p>
+                    <p class="confirmation__data-paste"></p>
                     <p><?php the_field('contact_text') ?></p>
                 </div>
                 <!-- /confirmation__data -->
@@ -71,10 +75,10 @@ get_header(); ?>
 
             <!-- guy -->
             <div class="guy guy_2">
-                <img src="<?=  DIRECT ?>img/guy-body.png" width="180" height="401" alt="">
+                <img src="<?=  DIRECT ?>img/guy-body.png" width="180" height="401" alt="Image">
 
                 <div class="guy__hand" data-rotate-start="50" data-rotate-finish="0">
-                    <img src="<?=  DIRECT ?>img/guy-hand.png" width="172" height="95" alt="">
+                    <img src="<?=  DIRECT ?>img/guy-hand.png" width="172" height="95" alt="Image">
                 </div>
 
             </div>
@@ -84,13 +88,13 @@ get_header(); ?>
 
         <!-- clouds -->
         <div class="clouds clouds_1">
-            <img src="<?=  DIRECT ?>img/cloud1.png" width="148" height="205" alt="">
+            <img src="<?=  DIRECT ?>img/cloud1.png" width="148" height="205" alt="Image">
         </div>
         <!-- /clouds -->
 
         <!-- clouds -->
         <div class="clouds clouds_2">
-            <img src="<?=  DIRECT ?>img/cloud2.png" width="134" height="196" alt="">
+            <img src="<?=  DIRECT ?>img/cloud2.png" width="134" height="196" alt="Image">
         </div>
         <!-- /clouds -->
 

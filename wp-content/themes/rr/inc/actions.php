@@ -77,10 +77,19 @@ function add_js()
         wp_register_script('checkout_js',get_template_directory_uri().'/dist/js/checkout.min.js');
         wp_enqueue_script('checkout_js');
     }
+    if (is_page_template('page-order.php')){
+
+        wp_enqueue_style('place', get_template_directory_uri().'/dist/css/place-order.css');
+        wp_register_script('place_js',get_template_directory_uri().'/dist/js/order.min.js');
+        wp_enqueue_script('place_js');
+    }
 
 
 }
 wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 
-
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+    return "<button class='button btn btn_arrow btn_3' id='gform_submit_button_{$form['id']}'><span>PLACE ORDER</span></button>";
+}
 ?>

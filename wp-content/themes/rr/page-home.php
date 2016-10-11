@@ -63,10 +63,10 @@ get_header(); ?>
 
             <!-- guy -->
             <div class="guy">
-                <img src="<?= DIRECT ?>img/guy-body.png" width="180" height="401" alt="">
+                <img src="<?= DIRECT ?>img/guy-body.png" width="180" height="401" alt="Image">
 
                 <div class="guy__hand" data-rotate-start="50" data-rotate-finish="0">
-                    <img src="<?= DIRECT ?>img/guy-hand.png" width="172" height="95" alt="">
+                    <img src="<?= DIRECT ?>img/guy-hand.png" width="172" height="95" alt="Image">
                 </div>
 
             </div>
@@ -81,7 +81,7 @@ get_header(); ?>
 
         <!-- clouds -->
         <div class="clouds clouds_1">
-            <img src="<?= DIRECT ?>img/cloud1.png" width="148" height="205" alt="">
+            <img src="<?= DIRECT ?>img/cloud1.png" width="148" height="205" alt="Image">
         </div>
         <!-- /clouds -->
 
@@ -152,7 +152,7 @@ get_header(); ?>
 
         <!-- clouds -->
         <div class="clouds clouds_2">
-            <img src="<?= DIRECT ?>img/cloud2.png" width="134" height="196" alt="">
+            <img src="<?= DIRECT ?>img/cloud2.png" width="134" height="196" alt="Image">
         </div>
         <!-- /clouds -->
 
@@ -215,10 +215,10 @@ get_header(); ?>
 
             <!-- guy -->
             <div class="guy guy_2">
-                <img src="<?= DIRECT ?>img/guy-body.png" width="180" height="401" alt="">
+                <img src="<?= DIRECT ?>img/guy-body.png" width="180" height="401" alt="Image">
 
                 <div class="guy__hand" data-rotate-start="50" data-rotate-finish="0">
-                    <img src="<?= DIRECT ?>img/guy-hand.png" width="172" height="95" alt="">
+                    <img src="<?= DIRECT ?>img/guy-hand.png" width="172" height="95" alt="Image">
                 </div>
 
             </div>
@@ -229,13 +229,13 @@ get_header(); ?>
 
         <!-- clouds -->
         <div class="clouds clouds_1">
-            <img src="<?= DIRECT ?>img/cloud1.png" width="148" height="205" alt="">
+            <img src="<?= DIRECT ?>img/cloud1.png" width="148" height="205" alt="Image">
         </div>
         <!-- /clouds -->
 
         <!-- clouds -->
         <div class="clouds clouds_2">
-            <img src="<?= DIRECT ?>img/cloud2.png" width="134" height="196" alt="">
+            <img src="<?= DIRECT ?>img/cloud2.png" width="134" height="196" alt="Image">
         </div>
         <!-- /clouds -->
 
