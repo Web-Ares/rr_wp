@@ -15,9 +15,9 @@ get_header(); ?>
 
             <!-- host__head -->
             <div class="host__head">
-                <?php if($offer = get_field('offer_text_before_the_title')): ?>
-                <span class="host__offer"><?= $offer ?></span>
-                <?php endif; ?>
+
+                <span class="host__offer">OFFER EXPIRES: <span class="host__offer-date">9/21/2016</span> 5PM:00 EST</span>
+
                 <?php if($discount = get_field('percent_of_discount')):
                     $discount_1 = '<span class="host__discount">'.$discount.' DISCOUNT ON</span>';
                 endif; ?>

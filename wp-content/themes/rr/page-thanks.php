@@ -7,6 +7,7 @@ get_header(); ?>
 <?php
 $name = $_GET['guest'];
 $order = $_GET['order'];
+$name = explode(' ',$name);
 ?>
 
 <!-- site__content -->
@@ -19,13 +20,13 @@ $order = $_GET['order'];
             <!-- confirmation__inner -->
             <div class="confirmation__inner">
 
-                <h1 class="site__title site__title_3">THANK YOU, <?= $name ?></h1>
+                <h1 class="site__title site__title_3">THANK YOU, <?= $name[0] ?></h1>
 
                 <!-- confirmation__data -->
                 <div class="confirmation__data">
                     <p><strong><?php the_field('order_text') ?></strong></p>
                     <p class="confirmation__data-paste"></p>
-                    <p><?php the_field('contact_text') ?></p>
+                    <p class="confirmation__contact-you"><?php the_field('contact_text') ?></p>
                 </div>
                 <!-- /confirmation__data -->
 
