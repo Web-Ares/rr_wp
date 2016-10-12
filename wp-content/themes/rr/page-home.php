@@ -22,7 +22,6 @@ get_header(); ?>
                     $discount_1 = '<span class="host__discount">'.$discount.' DISCOUNT ON</span>';
                 endif; ?>
 
-
                 <h2 class="site__title site__title_2"><span><?php the_field('title') ?> <?= $discount_1 ?></span></h2>
 
             </div>
@@ -63,7 +62,7 @@ get_header(); ?>
 
             <!-- guy -->
             <div class="guy">
-                <img src="<?= DIRECT ?>img/guy-body.png" width="180" height="401" alt="Image">
+                <img src="<?= DIRECT ?>img/guy-body2.png" width="180" height="401" alt="Image">
 
                 <div class="guy__hand" data-rotate-start="50" data-rotate-finish="0">
                     <img src="<?= DIRECT ?>img/guy-hand.png" width="172" height="95" alt="Image">

@@ -38,12 +38,19 @@ get_header(); ?>
                             <div class="plans__list">
 
                                 <!-- plans__list-row -->
-                                <div class="plans__list-row plans__list_caption plans__list-row_3">
+                                <div class="plans__list-row plans__list_caption plans__list-row_4">
 
                                     <!-- plans__list-col -->
                                     <div class="plans__list-col">
                                         Minutes
                                         included
+                                    </div>
+                                    <!-- /plans__list-col -->
+
+                                    <!-- plans__list-col -->
+                                    <div class="plans__list-col plans__list-col_del">
+                                        Regular
+                                        Plan / mo
                                     </div>
                                     <!-- /plans__list-col -->
 
@@ -91,8 +98,11 @@ get_header(); ?>
                                                         <input type="radio" name="plans" data-rate="minute pricing" value="<?= $value ?>" id="plan<?= $rowCounter ?>" <?= $checked; ?>>
                                                         <label for="plan<?= $rowCounter ?>">
 
-                                                        <span class="plans__list-row plans__list-row_3">
+                                                        <span class="plans__list-row plans__list-row_4">
                                                             <span><?= $column_1 ?></span>
+                                                            <?php if($old = get_sub_field('regular_plan')): ?>
+                                                            <span class="plans__old-price"><del>$<?= $old ?></del></span>
+                                                            <?php endif; ?>
                                                             <span>$<?= $column_2 ?></span>
                                                             <span>$<?= $column_3 ?></span>
                                                         </span>
@@ -130,12 +140,19 @@ get_header(); ?>
                             <div class="plans__list">
 
                                 <!-- plans__list-row -->
-                                <div class="plans__list-row plans__list_caption plans__list-row_2">
+                                <div class="plans__list-row plans__list_caption plans__list-row_3">
 
                                     <!-- plans__list-col -->
                                     <div class="plans__list-col">
                                         Reserved
                                         Sessions
+                                    </div>
+                                    <!-- /plans__list-col -->
+
+                                    <!-- plans__list-col -->
+                                    <div class="plans__list-col  plans__list-col_del">
+                                        Regular monthly
+                                        cost per session
                                     </div>
                                     <!-- /plans__list-col -->
 
@@ -168,8 +185,11 @@ get_header(); ?>
                                                <input type="radio" name="plans" data-rate="session pricing" value="<?= $value ?>" id="plan<?= $rowCounter ?>">
                                                <label for="plan<?= $rowCounter ?>">
 
-                                            <span class="plans__list-row plans__list-row_2">
+                                            <span class="plans__list-row plans__list-row_3">
                                                 <span><?= $column_1 ?></span>
+                                                <?php if($old = get_sub_field('regular_monthly_cost')): ?>
+                                                    <span class="plans__old-price"><del>$<?= $old ?></del></span>
+                                                <?php endif; ?>
                                                 <span>$<?= $column_2 ?></span>
                                             </span>
 
