@@ -19,7 +19,7 @@ get_header(); ?>
                 <span class="host__offer">OFFER EXPIRES: <span class="host__offer-date">9/21/2016</span> 5PM:00 EST</span>
 
                 <?php if($discount = get_field('percent_of_discount')):
-                    $discount_1 = '<span class="host__discount">'.$discount.' DISCOUNT ON</span>';
+                    $discount_1 = '<span class="host__discount">'.$discount.'</span>';
                 endif; ?>
 
                 <h2 class="site__title site__title_2"><span><?php the_field('title') ?> <?= $discount_1 ?></span></h2>
