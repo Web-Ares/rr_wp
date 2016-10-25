@@ -12,221 +12,13 @@ get_header(); ?>
     <div class="choose-data">
         <form action="#">
 
-            <!-- choose-data__items -->
-            <div class="choose-data__items">
 
-                <!-- choose-data__center -->
-                <div class="choose-data__center">
-
-                    <h1 class="site__title site__title_3"><span><?php the_field('rate_plan_title') ?></span></h1>
-
-                    <!-- plans -->
-                    <div class="plans">
-
-                        <!-- plans__item -->
-                        <div class="plans__item">
-
-                            <!-- plans__head -->
-                            <div class="plans__head">
-
-                                <?php the_field('preview_text_copy') ?>
-
-                            </div>
-                            <!-- /plans__head -->
-
-                            <!-- plans__list -->
-                            <div class="plans__list">
-
-                                <!-- plans__list-row -->
-                                <div class="plans__list-row plans__list_caption plans__list-row_4">
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col">
-                                        Minutes
-                                        included
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col plans__list-col_del">
-                                        Regular
-                                        Plan / mo
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col">
-                                        Monthly
-                                        Plan
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col">
-                                        Extra minute
-                                        charge
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                </div>
-                                <!-- /plans__list-row -->
-
-
-
-                                    <?php if( have_rows('per_minute_list') ):
-                                        $rowCounter = 1;
-                                        ?>
-                                <!-- plans__list-radio -->
-                                <div class="plans__list-radio">
-                                               <?php  while ( have_rows('per_minute_list') ) : the_row();
-
-                                                    if($rowCounter ==1){
-                                                        $checked = 'checked';
-                                                    }
-                                                    else{
-                                                        $checked='';
-                                                    }
-
-                                                    $column_1 = get_sub_field('minutes_included');
-                                                    $column_2 = get_sub_field('monthly_plan');
-                                                    $column_3 = get_sub_field('extra_minute_charge');
-                                                    $value =  $column_1.' $'.$column_2.' $'.$column_3;
-                                                    ?>
-
-                                                    <!-- nice-radio -->
-                                                    <div class="nice-radio">
-                                                        <input type="radio" name="plans" data-rate="minute pricing" value="<?= $value ?>" id="plan<?= $rowCounter ?>" <?= $checked; ?>>
-                                                        <label for="plan<?= $rowCounter ?>">
-
-                                                        <span class="plans__list-row plans__list-row_4">
-                                                            <span><?= $column_1 ?></span>
-                                                            <?php if($old = get_sub_field('regular_plan')): ?>
-                                                            <span class="plans__old-price"><del>$<?= $old ?></del></span>
-                                                            <?php endif; ?>
-                                                            <span>$<?= $column_2 ?></span>
-                                                            <span>$<?= $column_3 ?></span>
-                                                        </span>
-
-                                                        </label>
-                                                    </div>
-                                                    <!-- /nice-radio -->
-                                                    
-                                                    <?php
-                                                    $rowCounter++;
-                                                endwhile; ?>
-                                        </div>
-                                        <!-- /plans__list-radio -->
-
-                                        <?php     endif; ?>
-
-
-                            </div>
-                            <!-- /plans__list -->
-
-                        </div>
-                        <!-- /plans__item -->
-
-                        <!-- plans__item -->
-                        <div class="plans__item">
-
-                            <!-- plans__head -->
-                            <div class="plans__head">
-
-                                <?php the_field('preview_text') ?>
-                            </div>
-                            <!-- /plans__head -->
-
-                            <!-- plans__list -->
-                            <div class="plans__list">
-
-                                <!-- plans__list-row -->
-                                <div class="plans__list-row plans__list_caption plans__list-row_3">
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col">
-                                        Reserved
-                                        Sessions
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col  plans__list-col_del">
-                                        Regular monthly
-                                        cost per session
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                    <!-- plans__list-col -->
-                                    <div class="plans__list-col">
-                                        Monthly cost
-                                        per session
-                                    </div>
-                                    <!-- /plans__list-col -->
-
-                                </div>
-                                <!-- /plans__list-row -->
-
-
-
-                                    <?php if( have_rows('per_minute_list_copy') ): ?>
-                                <!-- plans__list-radio -->
-                                <div class="plans__list-radio">
-                                       <?php  while ( have_rows('per_minute_list_copy') ) : the_row();
-
-
-
-                                            $column_1 = get_sub_field('reserved_sessions');
-                                            $column_2 = get_sub_field('monthly_cost_per_session');
-                                            $value =  $column_1.' $'.$column_2;
-                                            ?>
-
-                                            <!-- nice-radio -->
-                                           <div class="nice-radio">
-                                               <input type="radio" name="plans" data-rate="session pricing" value="<?= $value ?>" id="plan<?= $rowCounter ?>">
-                                               <label for="plan<?= $rowCounter ?>">
-
-                                            <span class="plans__list-row plans__list-row_3">
-                                                <span><?= $column_1 ?></span>
-                                                <?php if($old = get_sub_field('regular_monthly_cost')): ?>
-                                                    <span class="plans__old-price"><del>$<?= $old ?></del></span>
-                                                <?php endif; ?>
-                                                <span>$<?= $column_2 ?></span>
-                                            </span>
-
-                                               </label>
-                                           </div>
-                                           <!-- /nice-radio -->
-
-
-                                            <?php
-                                            $rowCounter++;
-                                        endwhile; ?>
-
-                                </div>
-                                        <!-- /plans__list-radio -->
-
-                                  <?php   endif; ?>
-
-                            </div>
-                            <!-- /plans__list -->
-
-                        </div>
-                        <!-- /plans__item -->
-
-                    </div>
-                    <!-- /plans -->
-
-                </div>
-                <!-- /choose-data__center -->
-
-            </div>
-            <!-- /choose-data__items -->
 
             <!-- choose-data__items -->
             <div class="choose-data__items">
 
                 <!-- location -->
-                <div class="location">
+                <div class="location location_1">
 
                     <!-- choose-data__center -->
                     <div class="choose-data__center">
@@ -295,6 +87,68 @@ get_header(); ?>
 
                 </div>
                 <!-- /location -->
+
+            </div>
+            <!-- /choose-data__items -->
+
+            <!-- choose-data__items -->
+            <div class="choose-data__items">
+
+                <!-- capacity -->
+                <div class="capacity">
+
+                    <!-- choose-data__center -->
+                    <div class="choose-data__center">
+
+                        <h1 class="site__title site__title_3"><span><?php the_field('indicate_title') ?></span></h1>
+
+                        <!-- capacity__field -->
+                        <div class="capacity__field">
+
+                            <input name="num-posts" id="num-posts" type="text" class="site__input" placeholder="<?php the_field('placeholder_text') ?>">
+
+                            <?php if( have_rows('tariff_info_block') ): ?>
+                            <!-- capacity__price -->
+                            <div class="capacity__price">
+                                      <?php   while ( have_rows('tariff_info_block') ) : the_row(); ?>
+
+
+                                          <div><?php the_sub_field('new_info_line') ?></div>
+
+                                            <?php
+                                        endwhile; ?>
+                            </div>
+                            <!-- /capacity__price -->
+                            <?php endif; ?>
+
+                        </div>
+                        <!-- /capacity__field -->
+
+                        <?php if( have_rows('descriptions_block') ): ?>
+                            <!-- capacity__description -->
+                            <div class="capacity__description">
+                                <?php   while ( have_rows('descriptions_block') ) : the_row(); ?>
+
+
+                                    <span><?php the_sub_field('new_line_of_descriptions') ?></span>
+
+                                    <?php
+                                endwhile; ?>
+                            </div>
+                            <!-- /capacity__description -->
+                        <?php endif; ?>
+                        
+                    </div>
+                    <!-- /choose-data__center -->
+
+                    <!-- clouds -->
+                    <div class="clouds clouds_2">
+                        <img src="<?= DIRECT; ?>img/cloud2.png" width="134" height="196" alt="">
+                    </div>
+                    <!-- /clouds -->
+
+                </div>
+                <!-- /capacity -->
 
             </div>
             <!-- /choose-data__items -->
