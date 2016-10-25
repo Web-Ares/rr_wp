@@ -8,22 +8,22 @@ get_header(); ?>
 <div class="site__content">
 
     <!-- host -->
-    <div class="host" data-more="true" data-anchor="true">
+    <div class="host host_2" data-more="true" data-anchor="true">
 
         <!-- host__inner -->
         <div class="host__inner">
 
             <!-- host__head -->
             <div class="host__head">
-
-                <span class="host__offer">OFFER EXPIRES: <span class="host__offer-date">9/21/2016</span> 5PM:00 EST</span>
-
-                <?php if($discount = get_field('percent_of_discount')):
-                    $discount_1 = '<span class="host__discount">'.$discount.'</span>';
-                endif; ?>
-
-                <h2 class="site__title site__title_2"><span><?php the_field('title') ?> <?= $discount_1 ?></span></h2>
-
+                <div>
+                    <span class="host__offer">OFFER EXPIRES: <span class="host__offer-date">9/21/2016</span> 5PM:00 EST</span>
+    
+                    <?php if($discount = get_field('percent_of_discount')):
+                        $discount_1 = '<span class="host__discount">'.$discount.'</span>';
+                    endif; ?>
+    
+                    <h2 class="site__title site__title_2"><span><?php the_field('title') ?> <?= $discount_1 ?></span></h2>
+                </div>
             </div>
             <!-- /host__head -->
 
