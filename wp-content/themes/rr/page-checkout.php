@@ -105,7 +105,7 @@ get_header(); ?>
                         <!-- capacity__field -->
                         <div class="capacity__field">
 
-                            <input name="num-posts" id="num-posts" type="text" class="site__input" placeholder="<?php the_field('placeholder_text') ?>">
+                            <input name="num-posts" id="num-posts" type="text" class="site__input site__input_num" placeholder="<?php the_field('placeholder_text') ?>">
 
                             <?php if( have_rows('tariff_info_block') ): ?>
                             <!-- capacity__price -->
