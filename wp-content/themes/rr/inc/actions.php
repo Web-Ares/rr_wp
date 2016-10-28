@@ -97,6 +97,6 @@ register_nav_menus( array(
 
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
-    return "<button class='button btn btn_4' id='gform_submit_button_{$form['id']}'>PLACE ORDER</button>";
+    return "<button class='button btn btn_4' id='gform_submit_button_{$form['id']}'><span>PLACE ORDER</span></button>";
 }
 ?>
