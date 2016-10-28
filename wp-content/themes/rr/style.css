@@ -7,13 +7,21 @@ Version: 1.0
     display: none !important;
 }
 
-.gfield_label {
-    display: none !important;
-}
-.name_first label {
-    display: none !important;
-}
+/*.gfield_label {*/
+    /*display: none !important;*/
+/*}*/
+/*.name_first label {*/
+    /*display: none !important;*/
+/*}*/
 
 .validation_error {
     margin-bottom: 15px !important;
+}
+
+.gfield_error input, .gfield_error textarea{
+    border: 1px solid red !important;
+}
+
+.gform_ajax_spinner {
+    display: none !important;
 }
