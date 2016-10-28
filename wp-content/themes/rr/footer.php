@@ -11,7 +11,7 @@
         <!-- popup__content -->
         <div class="popup__content popup__request">
 
-            <?= do_shortcode('[gravityform id=2 title=true description=true ajax=true]') ?>
+            <?php echo do_shortcode('[gravityform id="2" title="true" description="true" ajax="true"]') ?>
 
         </div>
         <!-- /popup__content -->
