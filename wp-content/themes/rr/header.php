@@ -44,6 +44,40 @@ if(get_the_ID()===86 || get_the_ID()===49){
             <!-- /logo -->
         <?php } ?>
 
+        <!-- menu -->
+        <div class="menu">
+            <div>
+                <div>
+                    <nav>
+                        <?php $locations = get_nav_menu_locations();
+                        $menu_items = wp_get_nav_menu_items($locations['menu']);
+
+                        foreach ((array)$menu_items as $key => $menu_item) {
+
+                            if($post->ID==$menu_item->object_id){
+
+                                $active = ' active';
+
+                            } else {
+
+                                $active = '';
+
+                            }
+                            $menu_title =  $menu_item->title;
+
+                            ?>
+
+                            <a class="<?= $active ?>" href="<?= $menu_item->url; ?>"><?= $menu_title;  ?></a>
+                            <?php
+
+                        }?>
+                    </nav>
+
+                    <a href="#" class="btn btn_5 popup__open" data-popup="request">REQUEST A QUOTE</a>
+                </div>
+            </div>
+        </div>
+        <!-- /menu -->
 
     </header>
     <!-- /site__header -->

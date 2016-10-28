@@ -88,6 +88,11 @@ function add_js()
 }
 wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 
+if ( function_exists( 'add_theme_support' ) ) add_theme_support( 'post-thumbnails' );
+register_nav_menus( array(
+    'menu' => 'menu'
+) );
+
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
     return "<button class='button btn btn_arrow btn_3' id='gform_submit_button_{$form['id']}'><span>PLACE ORDER</span></button>";
