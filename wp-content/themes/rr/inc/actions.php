@@ -61,9 +61,13 @@ function add_js()
 
     if (is_page_template('page-home.php')){
 
-        wp_enqueue_style('index', get_template_directory_uri().'/dist/css/index.css');
+        wp_enqueue_style('index_css', get_template_directory_uri().'/dist/css/index.css');
+
         wp_register_script('index_js',get_template_directory_uri().'/dist/js/index.min.js');
         wp_enqueue_script('index_js');
+        wp_register_script('index_recaptcha','https://www.google.com/recaptcha/api.js');
+        wp_enqueue_script('index_recaptcha');
+
     }
     if (is_page_template('page-thanks.php')){
 
@@ -92,4 +96,11 @@ add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
     return "<button class='button btn btn_arrow btn_3' id='gform_submit_button_{$form['id']}'><span>PLACE ORDER</span></button>";
 }
+
+
+if ( function_exists( 'add_theme_support' ) ) add_theme_support( 'post-thumbnails' );
+register_nav_menus( array(
+    'menu' => 'menu'
+) );
+
 ?>
