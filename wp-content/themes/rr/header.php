@@ -7,6 +7,7 @@
     <meta name="format-detection" content="address=no">
 
     <title><?php wp_title(''); ?></title>
+    <?php gravity_form_enqueue_scripts( 2, true ); ?>
     <?php wp_head(); ?>
   
 
