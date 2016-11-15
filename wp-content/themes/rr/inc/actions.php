@@ -90,7 +90,7 @@ function add_js()
 
     if (is_page_template('page-sbc-home.php')){
 
-        wp_enqueue_style('scb_css', get_template_directory_uri().'/dist/css/scb-page.css');
+        wp_enqueue_style('scb_css', get_template_directory_uri().'/dist/css/index.css');
         wp_register_script('index_js',get_template_directory_uri().'/dist/js/index.min.js');
         wp_enqueue_script('index_js');
     }
@@ -101,7 +101,14 @@ wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
-    return "<button class='button btn btn_6' id='gform_submit_button_{$form['id']}'><span>SEND ME THE QUOTE</span></button>";
+
+    if($form['id'] == 3){
+        return "<button class='button btn btn_6' id='gform_submit_button_{$form['id']}'><span>SEND ME THE QUOTE</span></button>";
+    } elseif($form['id'] == 4) {
+
+        return "<button class='button btn btn_4' id='gform_submit_button_{$form['id']}'><span>Place order</span></button>";
+    }
+
 }
 
 
