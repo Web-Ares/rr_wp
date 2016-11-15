@@ -27,6 +27,7 @@ get_header(); ?>
             </div>
             <!-- /host__head -->
 
+            
             <!-- host__items -->
             <div class="host__items">
 

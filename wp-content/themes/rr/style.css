@@ -25,3 +25,7 @@ Version: 1.0
 .gform_ajax_spinner {
     display: none !important;
 }
+
+.validation_error {
+    display: none !important;
+}
