@@ -80,7 +80,6 @@ if(get_the_ID()===86 || get_the_ID()===49){
                         }?>
                     </nav>
 
-                    <a href="#" class="btn btn_5 popup__open" data-popup="request">REQUEST A QUOTE</a>
                 </div>
             </div>
         </div>
