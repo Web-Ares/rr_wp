@@ -31,7 +31,7 @@ get_header(); ?>
 
                 </div>
 
-                <h2 class="site__title site__title_2"><span><?php the_field('title') ?></span></h2>
+                <h2 class="site__title"><span><?php the_field('title') ?></span></h2>
 
             </div>
             <!-- /host__head -->
