@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: SBC Page
+ * Template Name: TDM Page
  */
 get_header(); ?>
 
@@ -167,7 +167,7 @@ get_header(); ?>
     <!-- /information -->
 
     <!-- setup-process -->
-    <div class="setup-process" data-more="true" data-anchor="true">
+    <div class="setup-process setup-process_1" data-more="true" data-anchor="true">
 
         <!-- setup-process__inner -->
         <div class="setup-process__inner">
@@ -241,30 +241,30 @@ get_header(); ?>
         <!-- available-pricing__inner -->
         <div class="available-pricing__inner">
 
-            <h2 class="site__title"><?= get_field('title_of_block_availible') ?></h2>
+            <h2 class="site__title"><?php the_field('title_of_block_availible')  ?></h2>
 
             <!-- available-pricing__wrap -->
-            <div class="available-pricing__wrap">
+            <div class="available-pricing__list">
 
-                <?php if( have_rows('pricing') ):
-                         
-                            while ( have_rows('pricing') ) : the_row(); ?>
+                <!-- available-pricing__list -->
+                <div class="available-pricing__list-main">
 
+                    <?php the_field('price_block')  ?>
 
-                                <!-- available-pricing__item -->
-                                <div class="available-pricing__item">
+                </div>
+                <!-- /available-pricing__list -->
 
-                                    <h2 class="available-pricing__topic"><?php  the_sub_field('title_of_block'); ?></h2>
+                <?php if( have_rows('traffic_list') ):
 
-                                    <p><?php the_sub_field('descripthion'); ?></p>
+                            while ( have_rows('traffic_list') ) : the_row(); ?>
 
-                                </div>
-                                <!-- /available-pricing__item -->
+                                <p><strong><?php the_sub_field('new_line'); ?></strong></p>
 
                                 <?php
-                
+
                             endwhile;
                         endif; ?>
+
 
             </div>
             <!-- /available-pricing__wrap -->
