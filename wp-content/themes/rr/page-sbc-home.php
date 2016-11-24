@@ -241,30 +241,30 @@ get_header(); ?>
         <!-- available-pricing__inner -->
         <div class="available-pricing__inner">
 
-            <h2 class="site__title"><?php the_field('title_of_block_availible')  ?></h2>
+            <h2 class="site__title"><?= get_field('title_of_block_availible') ?></h2>
 
             <!-- available-pricing__wrap -->
-            <div class="available-pricing__list">
+            <div class="available-pricing__wrap">
 
-                <!-- available-pricing__list -->
-                <div class="available-pricing__list-main">
+                <?php if( have_rows('pricing') ):
 
-                    <?php the_field('price_block')  ?>
+                    while ( have_rows('pricing') ) : the_row(); ?>
 
-                </div>
-                <!-- /available-pricing__list -->
 
-                <?php if( have_rows('traffic_list') ):
+                        <!-- available-pricing__item -->
+                        <div class="available-pricing__item">
 
-                            while ( have_rows('traffic_list') ) : the_row(); ?>
+                            <h2 class="available-pricing__topic"><?php  the_sub_field('title_of_block'); ?></h2>
 
-                                <p><strong><?php the_sub_field('new_line'); ?></strong></p>
+                            <p><?php the_sub_field('descripthion'); ?></p>
 
-                                <?php
+                        </div>
+                        <!-- /available-pricing__item -->
 
-                            endwhile;
-                        endif; ?>
+                        <?php
 
+                    endwhile;
+                endif; ?>
 
             </div>
             <!-- /available-pricing__wrap -->
